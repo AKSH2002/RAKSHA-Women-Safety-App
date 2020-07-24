@@ -1,0 +1,12 @@
+export const dialogflowConfig = {
+    "type": "service_account",
+    "project_id": "raksha-bot-ugbhtr",
+    "private_key_id": "e2dcbe449c24ce92641ff34d0d8d429ea9a12742",
+    "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvAIBADANBgkqhkiG9w0BAQEFAASCBKYwggSiAgEAAoIBAQDTMI7cJFb1SxQ8\nW0Lr4IXrnSg9D5NGeEa9L+e8dhp99yqpSomqyf1jtUg/PblfrXAfv3xEVALuV7IZ\nyAjM61P7B8GL2zhRlrES5Cz/FCFqLI91zoNwEFygPyn4WioD1LZLGg1S2nBAihNC\nuUspquX7vI74C3vqQtM4dQ/KBbYsIK/v0UTpPARoq8bBtvF6RmyLHxfS8nqSxqt1\ns0YibmLTA3SRGY12Gh49NCgDrUU953Ts0vtJgOkdOjuMUf1sOf4yjwnYSsVcgJuA\nvCmQ5gfP3VQPvuAHfCGH50TRSaEIfS9pESLbLix5C+5zJM3jHelKYdxm8nIRKjp9\nmDu33GGXAgMBAAECgf8DxAfD+DwXfhegc/vdsmQIQsFJ53b/Vt2d+l5SWSWD7y9q\na86fDrPDDGiEwmxmTzCfQdDTG9z3yOJTTiB4mnernvIoLxhF8+JzQH/839AhkeZi\n1IDdGEK2vB2GP8dEUnuz9XqYQiUhRrd0EmqAPMS54QJy651RTV+HewMiHGgTyyxT\nGpbDAtWbyCkDoez8T4TALkGyHeyf1JQkE0HVrxBGmAihI1dKl1a+BQtVmAayn5zJ\ni3vU/2eTMGlIA/dtJXoZ/fLM2g/xz9D2tzbyIsgrqCx0xR2sS2P7HZGK98hzw5ek\nRg93iGDndCqUkJOPdKkLerVFcOrqLXGaPUPcSXECgYEA9y703bAnPOnW3aOBa7g2\n9S014Eq7w9UvVu2AKsmmXiiqrY9hiY08YyQ2teTr3avq505J73yCmppcFIWrS7oH\nJdXj+18+N/VQqRLY2dA4D0SbVtnFaMfQHw+cyHM5zB21TvqBlN6kgopeOTSAcYP+\nPeNoTSLcIjCsUSOSX9Hd2fkCgYEA2rjw4ypAfezTZk7wbUyCMFS3/xOlHnoFAFGt\nZm3g0nhmUXeSSgNkCQzHQXWV18tdeORrjf404jfw7sdFiHBiXgKMep9fEfDTEH6+\nQE/l9wbypGMkKOHoQ8p7OMTsxGkEGzmfytjG4psdMjFi5ZkmFFcPR6ZT/zCqeAOH\nrvqIfA8CgYEAufY4wGPbUUd3oC13m6vupMvLoZ933aAQSmzJpOcqY+JibcrWDZ8V\nFF1VT8kW7iF9y2Ep3KOmultw9PuPYJxm7j8Zkq8X5w+HDHwiatPsqQfreg7CJs9U\ns1mSkXemvvqGwhFS1cYerBsfQhhOnZg4+SSR/p5AUPSfXzfM0ovYRTkCgYBYCyxE\ndUSirAto2ovjo3GgnOm4DyNfgkSzHS3M1pwyfO7LCnPjwTuqfO9UhU29IQrOWDyH\nWvXUvioJJEP0KTEfoK0Fy1OMuEFuGWbiIodyieRwkcwDfPRvHXm+n16jrZZOk0Kk\nd+CPZVs6UjD6NUzj0SvAbs7PIbrtNpaOtCDutwKBgQC6IQEOOR025o1eKrh6uyBa\nqkrwWWSvjY3NorKo3kKwIvJjFA5C7ChvDWk2C/iQo8VrDDTvwecD5G0SkUXzzFag\n1QbJXSZYsq0RBACm2iHlizgbJ3DMY/C0Z/Oosj4DewX39QhylCZRArKo/8S1KkRS\nXqtoa0hqfabv53zIcrf/SA==\n-----END PRIVATE KEY-----\n",
+    "client_email": "dialogflow-jrbyne@raksha-bot-ugbhtr.iam.gserviceaccount.com",
+    "client_id": "106457145979317777228",
+    "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+    "token_uri": "https://oauth2.googleapis.com/token",
+    "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+    "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/dialogflow-jrbyne%40raksha-bot-ugbhtr.iam.gserviceaccount.com"
+};

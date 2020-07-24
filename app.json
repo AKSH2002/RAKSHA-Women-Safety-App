@@ -1,0 +1,40 @@
+{
+  "expo": {
+    "name": "RAKSHA - Women Safety",
+    "slug": "raksha-silicon-valley-submission",
+    "platforms": [
+      "ios",
+      "android",
+      "web"
+    ],
+    "version": "1.0.3",
+    "orientation": "portrait",
+    "icon": "./assets/raksha-icon.png",
+    "splash": {
+      "image": "./assets/splash-raksha.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#ffffff"
+    },
+    "updates": {
+      "fallbackToCacheTimeout": 0
+    },
+    "android":{
+      "package": "com.app.raksha",
+      "permissions": ["ACCESS_COARSE_LOCATION","ACCESS_FINE_LOCATION","READ_CONTACTS","CALL_PHONE","SEND_SMS"]
+    },
+    "assetBundlePatterns": [
+      "../assets/DefenseVideos/Video1.mp4/*",
+      "../assets/DefenseVideos/Video2.mp4/*",
+      "../assets/DefenseVideos/Video3.mp4/*",
+      "../assets/DefenseVideos/Video4.mp4/*",
+      "../assets/DefenseVideos/Video5.mp4/*",
+      "../assets/DefenseVideos/Video6.mp4/*",
+      "../assets/DefenseVideos/Video7.mp4/*",
+      "../assets/DefenseVideos/Video8.mp4/*",
+      "../assets/DefenseVideos/Video9.mp4/*"
+    ],
+    "ios": {
+      "supportsTablet": true
+    }
+  }
+}
