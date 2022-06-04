@@ -125,7 +125,7 @@ export default class SOSscreen extends React.Component{
       <View>
         <View style={{flexDirection: 'row',  borderBottomWidth: 1, borderBottomColor: '#D2D2D2', paddingBottom: 20}}>
           <Icon name="arrow-left" type="font-awesome" size={25} onPress={()=>{this.setState({mapVisible:false})}} color="#7700F2" iconStyle={{alignSelf: 'flex-start', marginTop: 20, marginLeft: 5}}/>
-          <Text style={{textAlign: 'center', alignSelf:'center', fontSize: 20, marginLeft: 55, marginTop: 20}}>Nearby Police Stations</Text>
+          <Text style={{textAlign: 'center', alignSelf:'center', fontSize: 20, marginLeft: 55, marginTop: 20}}>Nearby Policess Stations</Text>
           <Icon name="map-marked-alt" type="font-awesome-5" size={25} color="#7700F2" iconStyle={{alignSelf: 'flex-end', marginRight: 8, marginTop: 20, marginLeft: 45}} />
         </View>
       </View>
@@ -149,16 +149,16 @@ export default class SOSscreen extends React.Component{
         visible={this.state.otherNumbersVisble}
       >
         <View>
-        <View style={{flexDirection: 'row',  borderBottomWidth: 1, borderBottomColor: '#D2D2D2', paddingBottom: 20, backgroundColor: '#681fa2'}}>
+        <View style={{flexDirection: 'row',  borderBottomWidth: 1, borderBottomColor: '#D2D2D2',  paddingBottom: 20, backgroundColor: '#681fa2'}}>
           <Icon name="arrow-left" type="font-awesome" size={25} onPress={()=>{this.setState({otherNumbersVisble: false})}} color="#fff" iconStyle={{alignSelf: 'flex-start', marginTop: 20, marginLeft: 5}}/>
           <Text style={{textAlign: 'center', alignSelf:'center', fontSize: 20, marginLeft: 65, marginTop: 20, color: '#fff'}}>Emergency Numbers</Text>
           <Icon name="phone-volume" type="font-awesome-5" size={25} color="#fff" iconStyle={{alignSelf: 'flex-end', marginRight: 2, marginTop: 20, marginLeft: 60}} />
         </View>
           <ImageBackground source={require('../assets/bg.png')} style={styles.image}>
-            <ScrollView contentContainerStyle={{height: 1000}}>
+            <ScrollView contentContainerStyle={{height: 1600}}>
 
                <Image style={styles.callImage} source={require('../assets/102.png')} />
-               <Button buttonStyle={styles.callButton} title="Call Ambulance 📞 102" titleStyle={styles.callButtonText} raised containerStyle={styles.callButton} onPress={()=>{call({number:'102'})}}/>
+               <Button buttonStyle={styles.callButton} title="Call Ambulance 📞 108" titleStyle={styles.callButtonText} raised containerStyle={styles.callButton} onPress={()=>{call({number:'102'})}}/>
 
                <Image style={styles.callImage} source={require('../assets/Helpline.png')} />
                <Button buttonStyle={styles.callButton} title="Women Helpline 📞 1091" titleStyle={styles.callButtonText} raised containerStyle={styles.callButton} onPress={()=>{call({number:'1091'})}}/>
@@ -169,6 +169,15 @@ export default class SOSscreen extends React.Component{
                <Image style={styles.callImage} source={require('../assets/112.png')} />
                <Button buttonStyle={styles.callButton} title="Emergency Helpline 📞 112" titleStyle={styles.callButtonText} raised containerStyle={styles.callButton} onPress={()=>{call({number:'112'})}}/>
 
+               <Image style={styles.callImage} source={require('../assets/ch1.png')} />
+               <Button buttonStyle={styles.callButton} title="Child care Helpline 📞 1098" titleStyle={styles.callButtonText} raised containerStyle={styles.callButton} onPress={()=>{call({number:'1098'})}}/>
+
+               <Image style={styles.callImage} source={require('../assets/ch2.png')} />
+               <Button buttonStyle={styles.callButton} title="Complain about child labour 📞 1800-102-7222" titleStyle={styles.callButtonText} raised containerStyle={styles.callButton} onPress={()=>{call({number:'1800-102-7222'})}}/>
+               
+               <Image style={styles.callImage} source={require('../assets/ch3.png')} />
+               <Button buttonStyle={styles.callButton} title="Complain about Child Marriage 📞 1098" titleStyle={styles.callButtonText} raised containerStyle={styles.callButton} onPress={()=>{call({number:'1098'})}}/>
+               
                </ScrollView>
           </ImageBackground>
         
@@ -289,7 +298,7 @@ export default class SOSscreen extends React.Component{
                       </TouchableOpacity>
 
                       <TouchableOpacity style={styles.button} onPress={()=>{this.setState({otherNumbersVisble: true})}} >
-                          <Image source={require('../assets/othernos.png')} style={styles.button}/>
+                          <Image source={require('../assets/ch4.png')} style={styles.button}/>
                           <Text style={styles.buttonText}>Emergency Numbers</Text>
                       </TouchableOpacity>
                       </View>
@@ -319,7 +328,7 @@ const styles = StyleSheet.create({
     },
     button: {
         width: 130,
-        height: 130,
+        height: 118,
         alignSelf: 'center',
     },
     buttonText: {
