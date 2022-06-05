@@ -28,6 +28,7 @@ export default class SOSscreen extends React.Component{
     super();
     this.state = {
       visible: false,
+      visibles: false,
       data : null,
       pressed: false,
       selectedId: null,
@@ -39,6 +40,7 @@ export default class SOSscreen extends React.Component{
       locationLongitude: null,
       addressLink: null,
       mapVisible: false,
+      mapVisibles: false,
       otherNumbersVisble: false
   };
 }
@@ -139,6 +141,36 @@ export default class SOSscreen extends React.Component{
       
     )
   }
+
+
+ //Function to show the nearby police stations
+ showPoliceStations=()=>{
+  return(
+    <Modal
+      animationType="slide"
+      transparent={false}
+      visible={this.state.mapVisible}
+    >
+    <View>
+      <View style={{flexDirection: 'row',  borderBottomWidth: 1, borderBottomColor: '#D2D2D2', paddingBottom: 20}}>
+        <Icon name="arrow-left" type="font-awesome" size={25} onPress={()=>{this.setState({mapVisible:false})}} color="#7700F2" iconStyle={{alignSelf: 'flex-start', marginTop: 20, marginLeft: 5}}/>
+        <Text style={{textAlign: 'center', alignSelf:'center', fontSize: 20, marginLeft: 55, marginTop: 20}}>Nearbyss Policess Stations</Text>
+        <Icon name="map-marked-alt" type="font-awesome-5" size={25} color="#7700F2" iconStyle={{alignSelf: 'flex-end', marginRight: 8, marginTop: 20, marginLeft: 45}} />
+      </View>
+    </View>
+
+    <WebView source={{ 
+      uri: "https://www.google.co.in/maps/search/nearby+police+station/@" + this.state.locationLatitude + ',' + this.state.locationLongitude + ',13z/data=!3m1!4b1?hl=en'
+      }} 
+      style={{borderTopWidth: 1, borderTopColor: '#000000'}}
+    />
+    </Modal>
+    
+  )
+}
+
+
+
 
   //Function to show the various emergency numbers
   showOtherNumbers=()=>{
@@ -302,6 +334,16 @@ export default class SOSscreen extends React.Component{
                           <Text style={styles.buttonText}>Emergency Numbers</Text>
                       </TouchableOpacity>
                       </View>
+
+                      <View style={{flexDirection: 'row', alignSelf: 'auto',marginTop: 75,marginLeft: 60}}>
+                      <TouchableOpacity style={[styles.button,{marginRight: 50}]} onPress={()=>{this.setState({mapVisible: true}), this.getLocation();}}>
+                          <Image source={require('../assets/info.png')} style={styles.button}/>
+                          <Text style={styles.buttonText}>Share Location</Text>
+                      </TouchableOpacity>
+
+                      </View>
+
+                      
 
                       <View>
                           <Avatar
