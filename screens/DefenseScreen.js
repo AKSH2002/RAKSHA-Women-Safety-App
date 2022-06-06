@@ -12,7 +12,8 @@ export default class DefenseScreen extends React.Component {
     //Defining states in constructor
     constructor(props){
         super(props);
-        this.state = { loading: true };
+        this.state = { loading: true,
+        paused: true };
     }
 
     async componentDidMount(){
@@ -34,92 +35,77 @@ export default class DefenseScreen extends React.Component {
                 
                 <ImageBackground source={require('../assets/bg.png')} style={styles.image}>
 
-                    <ScrollView contentContainerStyle={{height: 2650}}>
+                    <ScrollView contentContainerStyle={{height: 3300}}>
 
                         <Image style={{width: 100, height: 100, alignSelf: 'center', marginTop: 5, marginBottom: 5}} source ={require('../assets/selfdefense.png')} />
 
                         <Image style={styles.reasonImage} source ={require('../assets/defense-reasons.png')} />
 
                         <Video
-                            source={(require('../assets/DefenseVideos/Video3.mp4'))}
+                            source={(require('../assets/DefenseVideos/Video1.mp4'))}
                             rate={1.0}
-                            shouldPlay
-                            isLooping
+                            useNativeControls                            
                             style={styles.video}
                         />
-                        <Text style={styles.text}>Escape with hands trapped</Text>
+                        <Text style={styles.text}>An Ear Clap</Text>
 
                         <Video
                             source={require('../assets/DefenseVideos/Video2.mp4')}
                             rate={1.0}
-                            shouldPlay
-                            isLooping
+                            useNativeControls
                             style={styles.video}
                         />
-                        <Text style={styles.text}>Escape from side headlock</Text>
+                        <Text style={styles.text}>Eye jab</Text>
 
                         <Video
                             source={require('../assets/DefenseVideos/Video3.mp4')}
                             rate={1.0}
-                            shouldPlay
-                            isLooping
+                            useNativeControls
                             style={styles.video}
                         />
-                        <Text style={styles.text}>Groin Kick</Text>
+                        <Text style={styles.text}>Mentally Prepare for an Attact</Text>
 
                         <Video
                             source={require('../assets/DefenseVideos/Video4.mp4')}
                             rate={1.0}
-                            shouldPlay
-                            isLooping
+                            useNativeControls
                             style={styles.video}
                         />
-                        <Text style={styles.text}>Heel palm strike</Text>
+                        <Text style={styles.text}>Downward Stabbing</Text>
 
                         <Video
                             source={require('../assets/DefenseVideos/Video5.mp4')}
                             rate={1.0}
-                            shouldPlay
-                            isLooping
+                            useNativeControls
                             style={styles.video}
                         />
-                        <Text style={styles.text}>Elbow strike</Text>
+                        <Text style={styles.text}>Chain jab</Text>
 
                         <Video
                             source={require('../assets/DefenseVideos/Video6.mp4')}
                             rate={1.0}
-                            shouldPlay
-                            isLooping
+                            useNativeControls
                             style={styles.video}
                         />
-                        <Text style={styles.text}>Hammer strike</Text>
+                        <Text style={styles.text}>Basic Moves</Text>
 
                         <Video
                             source={require('../assets/DefenseVideos/Video7.mp4')}
                             rate={1.0}
-                            shouldPlay
-                            isLooping
+                            useNativeControls
                             style={styles.video}
                         />
-                        <Text style={styles.text}>Alternative elbow strike</Text>
+                        <Text style={styles.text}>Escape a Bear Hug</Text>
 
                         <Video
                             source={require('../assets/DefenseVideos/Video8.mp4')}
                             rate={1.0}
-                            shouldPlay
-                            isLooping
+                            useNativeControls
                             style={styles.video}
                         />
-                        <Text style={styles.text}>Hammer strike while swinging</Text>
+                        <Text style={styles.text}>Use Heels as a Weapon</Text>
 
-                        <Video
-                            source={require('../assets/DefenseVideos/Video9.mp4')}
-                            rate={1.0}
-                            shouldPlay
-                            isLooping
-                            style={styles.video}
-                        />
-                        <Text style={styles.text}>Escape from a 'bear hug attack'</Text>
+                       
                                       
                     </ScrollView>
 
@@ -144,9 +130,9 @@ const styles = StyleSheet.create({
         marginBottom: 40
     },
     video: {
-        marginHorizontal: 80,
-        width:200,
-        height:170
+        marginHorizontal: 0,
+        width:450,
+        height:270
     },
     text: {
         textAlign: 'center',

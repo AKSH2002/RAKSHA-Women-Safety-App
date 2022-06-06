@@ -18,9 +18,15 @@
     "updates": {
       "fallbackToCacheTimeout": 0
     },
-    "android":{
+    "android": {
       "package": "com.app.raksha",
-      "permissions": ["ACCESS_COARSE_LOCATION","ACCESS_FINE_LOCATION","READ_CONTACTS","CALL_PHONE","SEND_SMS"]
+      "permissions": [
+        "ACCESS_COARSE_LOCATION",
+        "ACCESS_FINE_LOCATION",
+        "READ_CONTACTS",
+        "CALL_PHONE",
+        "SEND_SMS"
+      ]
     },
     "assetBundlePatterns": [
       "../assets/DefenseVideos/Video1.mp4/*",
@@ -35,6 +41,8 @@
     ],
     "ios": {
       "supportsTablet": true
-    }
+    },
+    "description": "This project is taken from another GitHub account and I had done Reverse Engineering to add new features",
+    "githubUrl": "https://github.com/AKSH2002/RAKSHA-Women-Safety-App.git"
   }
 }

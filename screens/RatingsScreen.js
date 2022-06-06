@@ -33,7 +33,7 @@ export default class RatingsScreen extends React.Component {
                 <AppHeader navigation ={this.props.navigation}/>
                 
                 <ImageBackground source={require('../assets/bg.png')} style={styles.image}>
-                  <ScrollView contentContainerStyle={{height: 2000}}>
+                  <ScrollView contentContainerStyle={{height: 1000}}>
                     <Image style={{width: 100, height: 100, alignSelf: 'center', marginTop: 5, marginBottom: 10}} source ={require('../assets/ln.png')} />
 
                     
