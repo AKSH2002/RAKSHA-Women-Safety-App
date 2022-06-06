@@ -23,12 +23,13 @@ const args = {
 
 export default class SOSscreen extends React.Component{
 
+  state = {shouldOpenWebview: false}
+
   //Defining states in constructor
   constructor() {
     super();
     this.state = {
       visible: false,
-      visibles: false,
       data : null,
       pressed: false,
       selectedId: null,
@@ -40,7 +41,6 @@ export default class SOSscreen extends React.Component{
       locationLongitude: null,
       addressLink: null,
       mapVisible: false,
-      mapVisibles: false,
       otherNumbersVisble: false
   };
 }
@@ -49,6 +49,8 @@ export default class SOSscreen extends React.Component{
   updateSearch = search => {
     this.setState({ search });
   };
+   
+ 
 
   //Function to fetch contacts of the user from memory
   async componentDidMount(){
@@ -142,32 +144,8 @@ export default class SOSscreen extends React.Component{
     )
   }
 
+ 
 
- //Function to show the nearby police stations
- showPoliceStations=()=>{
-  return(
-    <Modal
-      animationType="slide"
-      transparent={false}
-      visible={this.state.mapVisible}
-    >
-    <View>
-      <View style={{flexDirection: 'row',  borderBottomWidth: 1, borderBottomColor: '#D2D2D2', paddingBottom: 20}}>
-        <Icon name="arrow-left" type="font-awesome" size={25} onPress={()=>{this.setState({mapVisible:false})}} color="#7700F2" iconStyle={{alignSelf: 'flex-start', marginTop: 20, marginLeft: 5}}/>
-        <Text style={{textAlign: 'center', alignSelf:'center', fontSize: 20, marginLeft: 55, marginTop: 20}}>Nearbyss Policess Stations</Text>
-        <Icon name="map-marked-alt" type="font-awesome-5" size={25} color="#7700F2" iconStyle={{alignSelf: 'flex-end', marginRight: 8, marginTop: 20, marginLeft: 45}} />
-      </View>
-    </View>
-
-    <WebView source={{ 
-      uri: "https://www.google.co.in/maps/search/nearby+police+station/@" + this.state.locationLatitude + ',' + this.state.locationLongitude + ',13z/data=!3m1!4b1?hl=en'
-      }} 
-      style={{borderTopWidth: 1, borderTopColor: '#000000'}}
-    />
-    </Modal>
-    
-  )
-}
 
 
 
@@ -190,7 +168,7 @@ export default class SOSscreen extends React.Component{
             <ScrollView contentContainerStyle={{height: 1600}}>
 
                <Image style={styles.callImage} source={require('../assets/102.png')} />
-               <Button buttonStyle={styles.callButton} title="Call Ambulance 📞 108" titleStyle={styles.callButtonText} raised containerStyle={styles.callButton} onPress={()=>{call({number:'102'})}}/>
+               <Button buttonStyle={styles.callButton} title="Call Ambulance 📞 108" titleStyle={styles.callButtonText} raised containerStyle={styles.callButton} onPress={()=>{call({number:'108'})}}/>
 
                <Image style={styles.callImage} source={require('../assets/Helpline.png')} />
                <Button buttonStyle={styles.callButton} title="Women Helpline 📞 1091" titleStyle={styles.callButtonText} raised containerStyle={styles.callButton} onPress={()=>{call({number:'1091'})}}/>
@@ -293,9 +271,29 @@ export default class SOSscreen extends React.Component{
       />
     )
   }
-
+ 
     //Displaying various components in render
     render(){
+      if (this.state.shouldOpenWebview) return <Modal
+      animationType="slide"
+      transparent={false}
+      
+    >
+    <View>
+      <View style={{flexDirection: 'row',  borderBottomWidth: 1, borderBottomColor: '#D2D2D2', paddingBottom: 20}}>
+        <Icon name="arrow-left" type="font-awesome" size={25} onPress={()=>{this.setState({shouldOpenWebview:false})}} color="#7700F2" iconStyle={{alignSelf: 'flex-start', marginTop: 20, marginLeft: 5}}/>
+        <Text style={{textAlign: 'center', alignSelf:'center', fontSize: 20, marginLeft: 55, marginTop: 20}}>Current Location</Text>
+        <Icon name="map-marked-alt" type="font-awesome-5" size={25} color="#7700F2" iconStyle={{alignSelf: 'flex-end', marginRight: 8, marginTop: 20, marginLeft: 45}} />
+      </View>
+    </View>
+
+    <WebView source={{ 
+      uri: "https://www.google.co.in/maps/@" + this.state.locationLatitude + ',' + this.state.locationLongitude + ',13z/data=!3m1!4b1?hl=en'
+      }} 
+      style={{borderTopWidth: 1, borderTopColor: '#000000'}}
+    />
+    </Modal>
+      
         return(
          
             <View>
@@ -335,9 +333,10 @@ export default class SOSscreen extends React.Component{
                       </TouchableOpacity>
                       </View>
 
+
                       <View style={{flexDirection: 'row', alignSelf: 'auto',marginTop: 75,marginLeft: 60}}>
-                      <TouchableOpacity style={[styles.button,{marginRight: 50}]} onPress={()=>{this.setState({mapVisible: true}), this.getLocation();}}>
-                          <Image source={require('../assets/info.png')} style={styles.button}/>
+                      <TouchableOpacity style={[styles.button,{marginRight: 50}]} onPress={()=>{this.setState({shouldOpenWebview: true})}}>
+                          <Image source={require('../assets/loc.png')} style={styles.button}/>
                           <Text style={styles.buttonText}>Share Location</Text>
                       </TouchableOpacity>
 
