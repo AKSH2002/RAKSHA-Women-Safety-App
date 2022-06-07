@@ -44,6 +44,7 @@ export default class DefenseScreen extends React.Component {
                         <Video
                             source={(require('../assets/DefenseVideos/Video1.mp4'))}
                             rate={1.0}
+                            resizeMode="cover"
                             useNativeControls                            
                             style={styles.video}
                         />
@@ -52,6 +53,7 @@ export default class DefenseScreen extends React.Component {
                         <Video
                             source={require('../assets/DefenseVideos/Video2.mp4')}
                             rate={1.0}
+                            resizeMode="cover"
                             useNativeControls
                             style={styles.video}
                         />
@@ -60,6 +62,7 @@ export default class DefenseScreen extends React.Component {
                         <Video
                             source={require('../assets/DefenseVideos/Video3.mp4')}
                             rate={1.0}
+                            resizeMode="cover"
                             useNativeControls
                             style={styles.video}
                         />
@@ -68,6 +71,7 @@ export default class DefenseScreen extends React.Component {
                         <Video
                             source={require('../assets/DefenseVideos/Video4.mp4')}
                             rate={1.0}
+                            resizeMode="cover"
                             useNativeControls
                             style={styles.video}
                         />
@@ -76,6 +80,7 @@ export default class DefenseScreen extends React.Component {
                         <Video
                             source={require('../assets/DefenseVideos/Video5.mp4')}
                             rate={1.0}
+                            resizeMode="cover"
                             useNativeControls
                             style={styles.video}
                         />
@@ -84,6 +89,7 @@ export default class DefenseScreen extends React.Component {
                         <Video
                             source={require('../assets/DefenseVideos/Video6.mp4')}
                             rate={1.0}
+                            resizeMode="cover"
                             useNativeControls
                             style={styles.video}
                         />
@@ -92,6 +98,7 @@ export default class DefenseScreen extends React.Component {
                         <Video
                             source={require('../assets/DefenseVideos/Video7.mp4')}
                             rate={1.0}
+                            resizeMode="cover"
                             useNativeControls
                             style={styles.video}
                         />
@@ -100,6 +107,7 @@ export default class DefenseScreen extends React.Component {
                         <Video
                             source={require('../assets/DefenseVideos/Video8.mp4')}
                             rate={1.0}
+                            resizeMode="cover" 
                             useNativeControls
                             style={styles.video}
                         />
@@ -131,7 +139,7 @@ const styles = StyleSheet.create({
     },
     video: {
         marginHorizontal: 0,
-        width:450,
+        width:425,
         height:270
     },
     text: {
